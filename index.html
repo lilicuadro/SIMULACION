@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <title>NUMEROS ALEATORIOS</title>
+  </header>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="./public/scripts/utilidades.js"></script>
+  <script src="./public/scripts/localStorage.js"></script>
+  <script src="./public/scripts/pruebasEstadisticas.js"></script>
+  <script src="./public/scripts/archivos.js"></script>
+  <script src="./public/scripts/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/alasql/0.3/alasql.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.7.12/xlsx.core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link rel="stylesheet" href="./public/styles/diseño.css" />
+
+  <body>
+    <form id="numeros_aleatorios">
+      <h1>Generar números aleatorios por método congruencia lineal mixto</h1>
+
+      <h5>Para generar numero aleatorios necesitamos ingresas x,a,c y m</h5>
+      <br />
+      ingrese m la cantidad de numero aleatoria de desea<input
+        type="number"
+        class="m"
+        name="m"
+        id="parametro_m"
+        required
+      />
+      <br />
+      ingrese a:
+      <input type="number" class="a" name="a" id="parametro_a" required />
+      <br />
+      ingrese x:
+      <input type="number" class="x" name="x" id="parametro_x" required />
+      <br />
+      ingrese c:
+      <input type="number" class="c" name="c" id="parametro_c" required />
+      <br />
+
+      <div id="outer">
+        <div class="inner">
+          <button
+            type="submit"
+            class="btn-custom btn-green"
+            id="btn_generar_aleatorios_lineal"
+          >
+            Generar lineal mixto
+          </button>
+        </div>
+        <div class="inner">
+          <button
+            type="submit"
+            class="btn-custom btn-green"
+            id="btn_exportar_aleatorios_lineal"
+          >
+            Exportar
+          </button>
+        </div>
+      </div>
+
+      <div id="outer">
+        <div class="inner">
+          <button
+            type="submit"
+            class="btn-custom btn-green"
+            id="btn_generar_aleatorios_multiplicativo"
+          >
+            Generar multiplicativo
+          </button>
+        </div>
+        <div class="inner">
+          <button
+            type="submit"
+            class="btn-custom btn-green"
+            id="btn_exportar_aleatorios_multiplicativo"
+          >
+            Exportar
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <form>
+      <h1 id="titulo_pruebas">Prueba Estadistica</h1>
+      <br />
+
+      Promedio
+      <button
+        button
+        type="button"
+        class="btn btn-green ancho"
+        id="btn_prueba_promedio"
+      >
+        Generar
+      </button>
+      <br />
+      Frecuencia
+      <button
+        button
+        type="button"
+        class="btn btn-green ancho"
+        id="btn_prueba_frecuencia"
+      >
+        Generar
+      </button>
+      <br />
+      Kolmogorov
+      <button
+        button
+        type="button"
+        class="btn btn-green ancho"
+        id="btn_prueba_kolmogorov"
+      >
+        Generar
+      </button>
+      <br />
+      Distancia
+      <button
+        type="button"
+        class="btn btn-green ancho"
+        id="btn_prueba_distancia"
+      >
+        Generar
+      </button>
+      <br />
+      Series
+      <button type="button" class="btn btn-green ancho" id="btn_prueba_series">
+        Generar
+      </button>
+      <br />
+    </form>
+  </body>
+</html>
